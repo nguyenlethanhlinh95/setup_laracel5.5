@@ -12,7 +12,7 @@
     <base href="{{ asset('') }}">
     <link href="assets/admin/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
-@yield('css')
+    @yield('css')
 <!-- Page-Level Plugin CSS - Dashboard -->
     <link href="assets/admin/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
     <link href="assets/admin/css/plugins/timeline/timeline.css" rel="stylesheet">

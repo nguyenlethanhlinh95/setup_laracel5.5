@@ -16,7 +16,7 @@
 <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
 <script src="assets/admin/js/demo/dashboard-demo.js"></script>
 
-@yield('js')
+@yield('script')
 </body>
 
 </html>

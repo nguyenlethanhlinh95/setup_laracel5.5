@@ -64,6 +64,6 @@
 </script>
 <a href="#" id="toTop"><span id="toTopHover"> </span></a>
 
-@yield('js')
+@yield('script')
 </body>
 </html>

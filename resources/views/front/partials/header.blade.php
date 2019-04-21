@@ -52,10 +52,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <a href="{{ route('homePage') }}"><img src="assets/front/images/logo.png" alt="" /></a>
             </div>
             <div class="cart">
-                <p>Welcome to our Online Store! <span>Cart:</span><div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00
-                    <ul class="dropdown">
-                        <li>you have no items in your Shopping cart</li>
-                    </ul></div></p>
+                <p>Welcome to our Online Store! <span>Cart:</span>
+                    <div id="dd" class="wrapper-dropdown-2">
+
+                        @if(Cart::count() == 0)
+                            {{ '0 item(s) - $0.00' }}
+                            <ul class="dropdown">
+                            <li>you have no items in your Shopping cart</li>
+                            {</ul>
+                        @else
+                            <?php
+                                echo Cart::count() . 'item(s) - ' . Cart::total();?>
+                                <ul class="dropdown">';
+                                <li><a href={{ route('cart.index') }}>View cart</a></li>";
+                                </ul>;
+                        @endif
+
+                        {{--@if (Cart::count() == 0)--}}
+                        {{--if (Cart::count() == 0)--}}
+                            {{--{--}}
+                                {{--echo '0 item(s) - $0.00';--}}
+                                {{--echo '<ul class="dropdown">';--}}
+                                {{--echo '<li>you have no items in your Shopping cart</li>';--}}
+                                {{--echo '</ul>';--}}
+                            {{--}--}}
+                            {{--else{--}}
+                                {{--echo Cart::count() . 'item(s) - ' . Cart::total();--}}
+                                {{--echo '<ul class="dropdown">';--}}
+                                {{--echo "<li><a href=>View cart</a></li>";--}}
+                                {{--echo '</ul>';--}}
+                            {{--}--}}
+
+
+
+                    </div>
+                </p>
             </div>
             <script type="text/javascript">
                 function DropDown(el) {
